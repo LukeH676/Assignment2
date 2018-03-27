@@ -3,6 +3,7 @@ package ca.on.sl.comp208.dbdemo;
 import android.annotation.TargetApi;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -102,9 +103,18 @@ public class MainActivity extends AppCompatActivity {
     private void showSchedule() {
         TextView txtView = (TextView) findViewById(R.id.txtResults);
         txtView.setText("");
-        DBHelper helper = new DBHelper(getApplicationContext());
-        SQLiteDatabase db = helper.getReadableDatabase();
-        Cursor cursor = helper.getSchedule(db);
+
+        String[] projection = {
+                ScheduleProviderContract.Course.COURSE_CODE,
+                ScheduleProviderContract.Schedule.DAY,
+                ScheduleProviderContract.Schedule.TIME,
+                ScheduleProviderContract.Room.ROOM_NUM
+
+        };
+
+        Uri uri = ScheduleProviderContract.CONTENT_URI;
+        Cursor cursor = getContentResolver().query(uri, projection, null, null,null);
+
         while (cursor.moveToNext()) {
             String output =
                     String.format("%-5s %s\n", cursor.getString(0) + "   " +cursor.getString(1), cursor.getString(2) + "   " +

@@ -8,17 +8,17 @@
 
     <TextView
         android:id="@+id/txtResults"
-        android:layout_width="363dp"
-        android:layout_height="426dp"
+        android:layout_width="267dp"
+        android:layout_height="293dp"
         android:layout_marginStart="8dp"
         android:ems="10"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintHorizontal_bias="0.422"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.947" />
+        app:layout_constraintVertical_bias="0.693" />
 
     <Button
         android:id="@+id/schedule"
@@ -28,10 +28,9 @@
         android:text="@string/schedule"
         app:layout_constraintBottom_toTopOf="@+id/txtResults"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintHorizontal_bias="0.963"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.505" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
@@ -42,10 +41,9 @@
         android:text="@string/Course"
         app:layout_constraintBottom_toTopOf="@+id/txtResults"
         app:layout_constraintEnd_toStartOf="@+id/schedule"
-        app:layout_constraintHorizontal_bias="0.985"
+        app:layout_constraintHorizontal_bias="0.958"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.505" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
@@ -55,9 +53,8 @@
         android:text="@string/Room"
         app:layout_constraintBottom_toTopOf="@+id/txtResults"
         app:layout_constraintEnd_toStartOf="@+id/course"
-        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.505" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

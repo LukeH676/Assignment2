@@ -1,10 +1,12 @@
 package ca.on.sl.comp208.dbdemo;
 
+import android.net.Uri;
 import android.provider.BaseColumns;
 
 
 public class ScheduleContract {
     // Prevent Schedule Contract from being instantiated.
+
     private ScheduleContract() {
     }
 
